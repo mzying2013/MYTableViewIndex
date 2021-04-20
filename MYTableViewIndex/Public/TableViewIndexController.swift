@@ -130,9 +130,9 @@ public class TableViewIndexController : NSObject {
             ? scrollView.convert(scrollView.bounds, to: tableViewIndex.superview) : scrollView.frame
         
         let width = tableFrame.width - (inset.left + inset.right)
-        let height = tableFrame.height - (inset.top + inset.bottom)
+        let height = tableFrame.height// - (inset.top + inset.bottom)
         
-        layout(in: CGRect(x: tableFrame.x + inset.left, y: tableFrame.y + inset.top, width: width, height: height))
+        layout(in: CGRect(x: tableFrame.x + inset.left, y: tableFrame.y /*+ inset.top*/, width: width, height: height))
     }
     
     private func layout(in rect: CGRect) {
